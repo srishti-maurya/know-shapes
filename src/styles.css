@@ -90,3 +90,20 @@ margin: 0rem 3rem;
 .triangle-angle-btn{
   margin: 3rem;
 }
+
+/* quiz */
+
+.quesBlock{
+  
+  margin: 3% 25%;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+#block1,#block2,#block3,#block4,#block5{
+  background-color: var(--bgColor);
+}
+
+#scoreDisplay{
+  margin-bottom: 2rem;
+}
