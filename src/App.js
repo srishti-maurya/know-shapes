@@ -15,7 +15,7 @@ function App() {
       <Router>
       <Header />
       <Switch>
-          <Route path="/home" exact>
+          <Route path="/" exact>
             <Home />
           </Route>
           <Route path="/angleOfTriangle">

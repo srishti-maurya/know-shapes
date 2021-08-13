@@ -1,4 +1,6 @@
 import React,{useState} from "react";
+import ImageAngle from "../images/img-angle.svg";
+
 
 var angle1,
   angle2,
@@ -20,6 +22,7 @@ function AngleOfTriangle() {
   return (
     <div className="container">
       <div className="triangle-angle">
+      <img src={ImageAngle} className="img-triangle"></img>
         <h4 className="triangle-angle-heading">
           Enter the angles in below input boxes and we will tell you if those
           angles make a Triangle

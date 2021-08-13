@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ImageArea from "../images/img-area.svg";
 let base,
   height, side1, side2, side3, length1, length2, angle;
 function AreaCalculator() {
@@ -50,6 +51,7 @@ function AreaCalculator() {
   return (
     <div className="container">
       <div className="triangle-angle">
+      <img src={ImageArea} className="img-triangle"></img><br/>
         <h1>Calculate Area</h1>
         <h4 className="triangle-angle-heading">
           Select an option below as per the data you have for a triangle
@@ -128,7 +130,7 @@ function AreaCalculator() {
                 </button>
               </form>
 
-              <div>{option1OutputMessage}</div>
+              <div>Area of the triangle : {option1OutputMessage}</div>
             </div>
           </div>
         </div>
@@ -180,7 +182,7 @@ function AreaCalculator() {
                 </button>
               </form>
 
-              <div>{option2OutputMessage}</div>
+              <div>Area of the triangle : {option2OutputMessage}</div>
             </div>
           </div>
         </div>
@@ -232,7 +234,7 @@ function AreaCalculator() {
                 </button>
               </form>
 
-              <div>{option3OutputMessage}</div>
+              <div>Area of the triangle : {option3OutputMessage}</div>
             </div>
           </div>
         </div>
