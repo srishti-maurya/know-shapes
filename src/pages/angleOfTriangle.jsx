@@ -22,7 +22,7 @@ function AngleOfTriangle() {
   return (
     <div className="container">
       <div className="triangle-angle">
-      <img src={ImageAngle} className="img-triangle"></img>
+      <img src={ImageAngle} className="img-triangle" alt="img-angle"></img>
         <h4 className="triangle-angle-heading">
           Enter the angles in below input boxes and we will tell you if those
           angles make a Triangle

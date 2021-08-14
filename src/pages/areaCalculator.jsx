@@ -51,7 +51,7 @@ function AreaCalculator() {
   return (
     <div className="container">
       <div className="triangle-angle">
-      <img src={ImageArea} className="img-triangle"></img><br/>
+      <img src={ImageArea} className="img-triangle" alt="img-area"></img><br/>
         <h1>Calculate Area</h1>
         <h4 className="triangle-angle-heading">
           Select an option below as per the data you have for a triangle
