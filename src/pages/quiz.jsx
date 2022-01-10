@@ -1,31 +1,30 @@
 import { useState } from "react";
 import React from "react";
 
-function Quiz() {
+const Quiz = () => {
   let counter = 0;
-  const [score, setScore]=useState(0);
+  const [score, setScore] = useState(0);
   function btnHandler(e) {
     e.preventDefault();
     if (document.getElementById("ques1-1").checked) {
       counter++;
-      document.getElementById("block1").style.backgroundColor="#b8e6be";
-
+      document.getElementById("block1").style.backgroundColor = "#b8e6be";
     }
     if (document.getElementById("ques2-2").checked) {
       counter++;
-      document.getElementById("block2").style.backgroundColor="#b8e6be";
+      document.getElementById("block2").style.backgroundColor = "#b8e6be";
     }
     if (document.getElementById("ques3-1").checked) {
       counter++;
-      document.getElementById("block3").style.backgroundColor="#b8e6be";
+      document.getElementById("block3").style.backgroundColor = "#b8e6be";
     }
     if (document.getElementById("ques4-1").checked) {
       counter++;
-      document.getElementById("block4").style.backgroundColor="#b8e6be";
+      document.getElementById("block4").style.backgroundColor = "#b8e6be";
     }
     if (document.getElementById("ques5-1").checked) {
       counter++;
-      document.getElementById("block5").style.backgroundColor="#b8e6be";
+      document.getElementById("block5").style.backgroundColor = "#b8e6be";
     }
     setScore(counter);
     document.getElementById("scoreDisplay").style.display = "block";
@@ -183,6 +182,6 @@ function Quiz() {
       </div>
     </div>
   );
-}
+};
 
 export default Quiz;

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ImageArea from "../images/img-area.svg";
-let base,
-  height, side1, side2, side3, length1, length2, angle;
-function AreaCalculator() {
+let base, height, side1, side2, side3, length1, length2, angle;
+const AreaCalculator = () => {
   const [option1OutputMessage, setOption1OutputMessage] = useState(["", 0]);
   const [option2OutputMessage, setOption2OutputMessage] = useState(["", 0]);
   const [option3OutputMessage, setOption3OutputMessage] = useState(["", 0]);
@@ -22,13 +21,13 @@ function AreaCalculator() {
     }
   }
 
-  function option1Handler(event) {
+  const option1Handler = (event) => {
     event.preventDefault();
     const area1 = (Number(base) * Number(height)) / 2;
     setOption1OutputMessage(["Area = ", area1]);
-  }
+  };
 
-  function option2Handler(event) {
+  const option2Handler = (event) => {
     event.preventDefault();
     const a = Number(side1);
     const b = Number(side2);
@@ -37,21 +36,22 @@ function AreaCalculator() {
     const ar = (semiPeri - a) * (semiPeri - b) * (semiPeri - c) * semiPeri;
     const area2 = Math.sqrt(ar);
     setOption2OutputMessage(["Area = ", area2]);
-  }
+  };
 
-  function option3Handler(event) {
+  const option3Handler = (event) => {
     event.preventDefault();
     const b = Number(length1);
     const c = Number(length2);
-    let a =Number(angle)
-    a = a * Math.PI / 180;
-    const area3 = ((b*c*Math.sin(a))*(1/2));
+    let a = Number(angle);
+    a = (a * Math.PI) / 180;
+    const area3 = b * c * Math.sin(a) * (1 / 2);
     setOption3OutputMessage(["Area = ", area3]);
-  }
+  };
   return (
     <div className="container">
       <div className="triangle-angle">
-      <img src={ImageArea} className="img-triangle" alt="img-area"></img><br/>
+        <img src={ImageArea} className="img-triangle" alt="img-area"></img>
+        <br />
         <h1>Calculate Area</h1>
         <h4 className="triangle-angle-heading">
           Select an option below as per the data you have for a triangle
@@ -187,11 +187,11 @@ function AreaCalculator() {
           </div>
         </div>
         <div id="option3Body" style={{ display: "none" }}>
-        <div className="container">
+          <div className="container">
             <div className="triangle-angle">
               <h4 className="triangle-angle-heading">
-                Enter the 2 sides and angle in below input boxes to calculate the area of
-                the triangle
+                Enter the 2 sides and angle in below input boxes to calculate
+                the area of the triangle
               </h4>
               <form onSubmit={option3Handler}>
                 <div class="row">
@@ -241,6 +241,6 @@ function AreaCalculator() {
       </div>
     </div>
   );
-}
+};
 
 export default AreaCalculator;
